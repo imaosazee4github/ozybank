@@ -25,7 +25,7 @@ const bankAccountController = {
         const newAccount = {
             accountNumber,
             accountHolderName,
-            // accountHolderDOB,
+            accountHolderDOB,
             accountType,
             balance: initialBalance,
         };
@@ -57,7 +57,7 @@ const bankAccountController = {
         res.json(account);
     },
 
-    
+
     fetchAllAccounts: (req, res) => {
         const accounts = readDatabase();
         res.json(accounts);
