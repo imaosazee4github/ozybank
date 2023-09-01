@@ -1,11 +1,6 @@
 const {readDatabase, writeDatabase} = require('../utils/database.js');
+const generateAccountNumber = require('../utils/acctgenerator.js');
 
-function generateAccountNumber() {
-    // Generate a random 10-digit number
-    const accountNumber = Math.floor(1000000000 + Math.random() * 9000000000).toString();
-    
-    return accountNumber;
-  }
 
 const bankAccountController = {
     createAccount: (req, res) => {
